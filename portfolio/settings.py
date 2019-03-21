@@ -121,7 +121,31 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-try:
-    from local_settings import *
-except ImportError:
-    pass
+
+# From instructions for Digtialocean deployment
+# try:
+#     from local_settings import *
+# except ImportError:
+#     pass
+
+# instructions from Python Crash Course for deployment to Heroku:
+
+cwd = os.getcwd()
+if cwd == '/app' or cwd[:4] == '/tmp':
+    import dj_database_url
+    DATABASE = {
+        'default': dj_database_url.config(default='postgres://localhost')
+    }
+
+    # Honor the 'X-Fowarded-Proto' header for request.is_secure().
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+    # Allow all host headers.
+    ALLOWED_HOSTS = ['*']
+
+    # Static asset configuration
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    STATIC_ROOT = 'staticfiles'
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static')
+    )
