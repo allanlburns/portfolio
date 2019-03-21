@@ -13,7 +13,7 @@ SECRET_KEY = '(=o1(m&-n36ge&g*5^p1i0r%(cl@2w=x$9@qfba@&))b=_=ay5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['allans-portfolio.herokuapp.com']
 
 
 # Application definition
