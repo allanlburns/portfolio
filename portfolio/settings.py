@@ -151,4 +151,5 @@ MEDIA_URL = '/media/'
 #         os.path.join(BASE_DIR, 'static'),
 #     )
 
-django_heroku.settings(locals(SECRET_KEY = '(=o1(m&-n36ge&g*5^p1i0r%(cl@m&-n36ge&g*5^p1i0rm&-n36ge&g*5^p1i0rm&-n36ge&g*5^p1i0r2w=x$9@qfba@&))b=_=ay5'))
+# Activate Heroku settings for Django
+django_heroku.settings(locals())
