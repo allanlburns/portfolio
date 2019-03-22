@@ -1,4 +1,5 @@
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -8,7 +9,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '(=o1(m&-n36ge&g*5^p1i0r%(cl@2w=x$9@qfba@&))b=_=ay5'
+SECRET_KEY = '(=o1(m&-n36ge&g*5^p1i0r%(cl@m&-n36ge&g*5^p1i0rm&-n36ge&g*5^p1i0rm&-n36ge&g*5^p1i0r2w=x$9@qfba@&))b=_=ay5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -130,22 +131,24 @@ MEDIA_URL = '/media/'
 
 # instructions from Python Crash Course for deployment to Heroku:
 
-cwd = os.getcwd()
-if cwd == '/app' or cwd[:4] == '/tmp':
-    import dj_database_url
-    DATABASES = {
-        'default': dj_database_url.config(default='postgres://localhost')
-    }
+# cwd = os.getcwd()
+# if cwd == '/app' or cwd[:4] == '/tmp':
+#     import dj_database_url
+#     DATABASES = {
+#         'default': dj_database_url.config(default='postgres://localhost')
+#     }
 
-    # Honor the 'X-Fowarded-Proto' header for request.is_secure().
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+#     # Honor the 'X-Fowarded-Proto' header for request.is_secure().
+#     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-    # Allow all host headers.
-    ALLOWED_HOSTS = ['*']
+#     # Allow all host headers.
+#     ALLOWED_HOSTS = ['*']
 
-    # Static asset configuration
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    STATIC_ROOT = 'staticfiles'
-    STATICFILES_DIRS = (
-        os.path.join(BASE_DIR, 'static'),
-    )
+#     # Static asset configuration
+#     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+#     STATIC_ROOT = 'staticfiles'
+#     STATICFILES_DIRS = (
+#         os.path.join(BASE_DIR, 'static'),
+#     )
+
+django_heroku.settings(locals(SECRET_KEY = '(=o1(m&-n36ge&g*5^p1i0r%(cl@m&-n36ge&g*5^p1i0rm&-n36ge&g*5^p1i0rm&-n36ge&g*5^p1i0r2w=x$9@qfba@&))b=_=ay5'))
