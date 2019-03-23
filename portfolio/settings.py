@@ -12,7 +12,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(=o1(m&-n36ge&g*5^p1i0r%(cl@m&-n36ge&g*5^p1i0rm&-n36ge&g*5^p1i0rm&-n36ge&g*5^p1i0r2w=x$9@qfba@&))b=_=ay5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['allans-portfolio.herokuapp.com']
 
