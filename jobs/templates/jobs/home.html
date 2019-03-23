@@ -75,8 +75,8 @@
 							<img class="card-img-top" src="{{ job.image.url }}">
 							<div class="card-body">
 								<p class="card-text">{{ job.summary }}</p>
-								<p class="cart-text">URL:<a href="{{ job.url }}"></a></p>
-								<p class="cart-text">Github Code:<a href="{{ job.github_url }}"></a></p>
+								<p class="card-text">URL: <a href={{ job.url }} target="_blank">{{ job.url }}</a></p>
+								<p class="card-text">Github Code: <a href={{ job.github_url }} target="_blank">{{ job.github_url }}</a></p>
 							</div>
 						</div>
 					</div>
