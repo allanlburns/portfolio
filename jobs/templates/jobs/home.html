@@ -64,14 +64,15 @@
 			</div>
 		</section>
 
-		<div class="album py-5 bg-light">
+		<!-- Dynamically displayed images won't work because of issue with media images and Heroku. Disabling for now. Have to hard code. -->
+		<!-- <div class="album py-5 bg-light">
 			<div class="container">
 
 				<div class="row">
 					{% for job in jobs %}
 					<div class="col-md-4">
 						<div class="card mb-4 shadow-sm">
-							<a href="{{ job.image.url }}"><img src="{{ job.image.url }}"></a>
+							<a href="{{ job.image.url }}"><img class="card-img-top" src="{{ job.image.url }}"></a>
 							<div class="card-body">
 								<p class="card-text">{{ job.summary }}</p>
 								<p class="card-text">URL: <a href={{ job.url }} target="_blank">{{ job.url }}</a></p>
@@ -82,7 +83,92 @@
 					{% endfor %}
 				</div>
 			</div>
+		</div> -->
+
+		<!-- Gotta hard code this for now: -->
+		<div class="album py-5 bg-light">
+			<div class="container">
+
+				<div class="row">
+				<!-- 	{% for job in jobs %} -->
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<a href="{% static 'rails_social_media_site.jpg' %}"><img class="card-img-top" src="{% static 'rails_social_media_site.jpg' %}"></a>
+							<div class="card-body">
+								<p class="card-text">{{ job.summary }}</p>
+								<p class="card-text">URL: <a href={{ job.url }} target="_blank">{{ job.url }}</a></p>
+								<p class="card-text">Github Code: <a href={{ job.github_url }} target="_blank">{{ job.github_url }}</a></p>
+							</div>
+						</div>
+					</div>
+				<!-- 	{% endfor %} -->
+				</div>
+			</div>
 		</div>
+
+		<div class="album py-5 bg-light">
+			<div class="container">
+
+				<div class="row">
+				<!-- 	{% for job in jobs %} -->
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<a href="{{ job.image.url }}"><img class="card-img-top" src="{{ job.image.url }}"></a>
+							<div class="card-body">
+								<p class="card-text">{{ job.summary }}</p>
+								<p class="card-text">URL: <a href={{ job.url }} target="_blank">{{ job.url }}</a></p>
+								<p class="card-text">Github Code: <a href={{ job.github_url }} target="_blank">{{ job.github_url }}</a></p>
+							</div>
+						</div>
+					</div>
+				<!-- 	{% endfor %} -->
+				</div>
+			</div>
+		</div>
+
+		<div class="album py-5 bg-light">
+			<div class="container">
+
+				<div class="row">
+				<!-- 	{% for job in jobs %} -->
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<a href="{{ job.image.url }}"><img class="card-img-top" src="{{ job.image.url }}"></a>
+							<div class="card-body">
+								<p class="card-text">{{ job.summary }}</p>
+								<p class="card-text">URL: <a href={{ job.url }} target="_blank">{{ job.url }}</a></p>
+								<p class="card-text">Github Code: <a href={{ job.github_url }} target="_blank">{{ job.github_url }}</a></p>
+							</div>
+						</div>
+					</div>
+				<!-- 	{% endfor %} -->
+				</div>
+			</div>
+		</div>
+
+		<div class="album py-5 bg-light">
+			<div class="container">
+
+				<div class="row">
+				<!-- 	{% for job in jobs %} -->
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<a href="{{ job.image.url }}"><img class="card-img-top" src="{{ job.image.url }}"></a>
+							<div class="card-body">
+								<p class="card-text">{{ job.summary }}</p>
+								<p class="card-text">URL: <a href={{ job.url }} target="_blank">{{ job.url }}</a></p>
+								<p class="card-text">Github Code: <a href={{ job.github_url }} target="_blank">{{ job.github_url }}</a></p>
+							</div>
+						</div>
+					</div>
+				<!-- 	{% endfor %} -->
+				</div>
+			</div>
+		</div>
+
+
+		<!-- End of hard coded section. Remove once I fix media file serving issue. -->
+
 
 	</main>
 
