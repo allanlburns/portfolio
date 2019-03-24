@@ -93,7 +93,8 @@
 				<!-- 	{% for job in jobs %} -->
 					<div class="col-md-4">
 						<div class="card mb-4 shadow-sm">
-							<a href="{% static 'rails_social_media_site.jpg' %}"><img class="card-img-top" src="{% static 'rails_social_media_site.jpg' %}"></a>
+							<!-- <a href="{% static 'rails_social_media_site.jpg' %}"><img class="card-img-top" src="{% static 'rails_social_media_site.jpg' %}"></a> -->
+							<img class="card-img-top" src="{% static 'rails_social_media_site.jpg' %}">
 							<div class="card-body">
 								<p class="card-text">{{ job.summary }}</p>
 								<p class="card-text">URL: <a href={{ job.url }} target="_blank">{{ job.url }}</a></p>
