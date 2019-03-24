@@ -71,7 +71,7 @@
 					{% for job in jobs %}
 					<div class="col-md-4">
 						<div class="card mb-4 shadow-sm">
-							<a href="{{ job.image.url }}"><img class="card-img-top" src="{{ job.image.url }}"></a>
+							<a href="{{ job.image.url }}"><img class="card-img-top" src="{% static job.image.url %}"></a>
 							<div class="card-body">
 								<p class="card-text">{{ job.summary }}</p>
 								<p class="card-text">URL: <a href={{ job.url }} target="_blank">{{ job.url }}</a></p>
