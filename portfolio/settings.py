@@ -14,7 +14,7 @@ SECRET_KEY = '(=o1(m&-n36ge&g*5^p1i0r%(cl@m&-n36ge&g*5^p1i0rm&-n36ge&g*5^p1i0rm&
 # SECURITY WARNING: don't run with debug turned on in production!
 
 # We get a server error 500 on Heroku when False.
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['allans-portfolio.herokuapp.com']
 
